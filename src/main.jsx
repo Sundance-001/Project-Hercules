@@ -6,6 +6,7 @@ import DataScience from "./DataScience";
 import IoT from "./IoT";
 import "./index.css"; // your Tailwind/global styles
 import './explore.css';
+import { Analytics } from "@vercel/analytics/next"
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
