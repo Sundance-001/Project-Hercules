@@ -3,11 +3,20 @@ import { Link } from "react-router-dom";
 import "./explore.css";
 
 const Counter = () => {
-  const interests = [
+  // Right sidebar → Tech interests
+  const interestsRight = [
     { name: "Data Science", path: "/data-science" },
     { name: "IoT Projects", path: "/iot" },
     { name: "Web Development", path: "/web-dev" },
     { name: "AI & Machine Learning", path: "/ai" },
+  ];
+
+  // Left sidebar → Personal interests
+  const interestsLeft = [
+    { name: "Cinema and Theater" },
+    { name: "Art & Literature" },
+    { name: "Engineering" },
+    { name: "Blogs" },
   ];
 
   // Separate counters for left and right sidebar
@@ -16,14 +25,14 @@ const Counter = () => {
 
   // Reveal button → Right sidebar
   const handleReveal = () => {
-    if (visibleRight < interests.length) {
+    if (visibleRight < interestsRight.length) {
       setVisibleRight(visibleRight + 1);
     }
   };
 
   // Kursk button → Left sidebar
   const handleCenter = () => {
-    if (visibleLeft < interests.length) {
+    if (visibleLeft < interestsLeft.length) {
       setVisibleLeft(visibleLeft + 1);
     }
   };
@@ -33,17 +42,17 @@ const Counter = () => {
       {/* Buttons centered below socials */}
       <div className="buttons-center">
         <button onClick={handleReveal} className="explore-button">
-          Reveal
+          Interests
         </button>
         <button onClick={handleCenter} className="explore-button">
-          Kursk
+          Prospects
         </button>
       </div>
 
-      {/* Right sidebar → Reveal */}
+      {/* Right sidebar → Tech Interests */}
       <div className="sidebar-right">
         <div className="interests-flex sidebar-interests">
-          {interests.slice(0, visibleRight).map((item, index) => (
+          {interestsRight.slice(0, visibleRight).map((item, index) => (
             <Link
               key={index}
               to={item.path}
@@ -55,10 +64,10 @@ const Counter = () => {
         </div>
       </div>
 
-      {/* Left sidebar → Kursk */}
+      {/* Left sidebar → Personal Interests */}
       <div className="sidebar-left">
         <div className="interests-flex sidebar-interests">
-          {interests.slice(0, visibleLeft).map((item, index) => (
+          {interestsLeft.slice(0, visibleLeft).map((item, index) => (
             <div key={index} className="interest-box animate-fadeIn">
               {item.name}
             </div>
