@@ -1,3 +1,4 @@
+//Explore is unused from an earlier version for proof of concept
 // import { useState } from "react";
 // import { Link } from "react-router-dom";
 // import "./explore.css";
