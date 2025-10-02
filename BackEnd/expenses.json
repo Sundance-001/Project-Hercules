@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "item": "allure",
+        "amount": 10000.0
+    },
+    {
+        "id": 2,
+        "item": "brine",
+        "amount": 22.0
+    },
+    {
+        "id": 5,
+        "item": "chicken",
+        "amount": 300.0
+    },
+    {
+        "id": 6,
+        "item": "buckets",
+        "amount": 999.0
+    }
+]
